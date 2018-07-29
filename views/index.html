@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="favicon.ico">
+
+    <title>Restaurant Roulette </title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="rr.css" rel="stylesheet">
+    <script>
+
+      function playlistOption(){
+        var list = document.getElementById("playlist");
+        if(selectedIndex = "Anything!"){
+          while(list.options.length){
+            list.remove(0);
+          }
+          list.options.add(new Option('Test'));
+
+      }
+    </script>
+
+
+
+  </head>
+
+  <body class="text-center">
+
+    <div class="cover-container d-flex w-100 h-50 p-3 mx-auto flex-column">
+      <header class="masthead mb-auto">
+        <div class="inner">
+          <h3 class="masthead-brand">Restaurant Roulette</h3>
+
+          <!--
+          <nav class="nav nav-masthead justify-content-center">
+            <a class="nav-link active" href="#">Home</a>
+            <a class="nav-link" href="#">Features</a>
+            <a class="nav-link" href="#">Contact</a>
+          </nav>
+      -->
+        </div>
+      </header>
+
+      <main role="main" class="inner cover">
+       <!-- <h1 class="cover-heading">What's for lunch?</h1>-->
+        <!--<p class="lead">What's for lunch?</p>
+    -->
+      
+
+
+<form id="form1" action = "/process_post" method = "POST">
+ 
+  <div class="form-group">
+    <label for="playlist">What are you hungry for?</label>
+    <select class="form-control" id="playlist" input type = "text" name = "playlist">
+      <option>Lunch</option>
+      <option>Healthy</option>
+      <option>Gluten free</option>
+      <option>Quick bite</option>
+      <option>Coffee</option>
+      <option>Fast Food</option>     
+    </select>
+  </div>
+
+
+  <div class="form-group">
+    <label for="address">Address</label>
+    <input type="text" class="form-control" id="address" value="5565 Morehouse Dr, San Diego, CA 92121" name="address">
+  </div>
+
+      <div class="form-check" input type = "text" name="form-check">
+        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="1609" checked>
+        <label class="form-check-label" for="exampleRadios1">
+          Less than 1 mile away
+        </label>
+      </div>
+
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="8046">
+        <label class="form-check-label" for="exampleRadios2">
+          Less than 5 miles away
+
+        </label>
+      </div>      
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="16093">
+        <label class="form-check-label" for="exampleRadios3">
+          5+ miles away
+
+        </label>
+      </div>
+      <br>
+        <input type = "submit" class="btn btn-lg btn-secondary"value = "Roll!">
+</form>
+
+
+<p>
+
+      </main>
+
+      <footer class="mastfoot mt-auto">
+       <!--
+        <div class="inner">
+          <p>Restaurant Roulette</p>
+        </div>-->
+      </footer>
+
+
+    </div>
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+    <script src="js/vendor/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+
+
+  </body>
+</html>
+

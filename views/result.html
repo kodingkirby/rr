@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link rel="icon" href="favicon.ico">
+
+  <title>Restaurant Roulette </title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="rr.css" rel="stylesheet">
+  
+
+  </head>
+  <body class="text-center">
+
+    <div class="container d-flex h-100 p-3 mx-auto flex-column">
+      <header class="masthead">
+       <div class="inner">
+        <h3 class="masthead-brand">Restaurant Roulette</h3>
+       </div>
+      </header>
+        {{#records}}
+      <main role="main" class="inner cover">
+          <div class="container">
+            <h3 class="display-4">{{name}}</h1>
+              {{#location}}
+              <img src="{{image_url}}" class="img-fluid" alt="response_image">
+            <p class="lead">{{display_address}}</p>
+              {{/location}}
+
+<ul class="list-unstyled text text-left">
+  <li>Is closed?           : {{is_closed}}</li>
+  <li>Rating               : {{rating}}</li>
+  <li>Review Count         : {{review_count}}</li>
+  <li>Price                : {{price}}</li>
+  <li>Phone                : {{display_phone}}</li>
+
+  <br>
+<a href="{{url}}"class="btn btn-primary btn-lg btn-block" >Go to Yelp! page</a>
+<a href="/reroll" class="btn btn-secondary btn-lg btn-block">Roll again</a>
+<a href="/index.html" class="btn btn-secondary btn-lg btn-block">Change Parameters</a>
+</ul>
+<p></p>
+
+          </div>
+
+        </div>
+
+
+        {{/records}}
+
+</p>
+
+
+    </body>
+
+
+
+    <!-- Bootstrap core JavaScript
+      ================================================== -->
+      <!-- Placed at the end of the document so the pages load faster -->
+      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+      <script>src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"</script>
+      <script src="js/vendor/popper.min.js"></script>
+      <script src="js/bootstrap.min.js"></script>
+      <script src="js/handlebars.min.js"></script>
+    
+
+
+    </html>
+
