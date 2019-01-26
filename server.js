@@ -114,6 +114,15 @@ TODO: Error Screen for when out of restaurants to choose from (rare)
 app.get("/reroll", function(req,res){
 	client.search(searchRequest).then(response => {
 	  randResult = response.jsonBody.businesses[Math.floor(Math.random()*response.jsonBody.businesses.length)];
+	  if(randResult.is_closed == true){
+	  	randResult.is_closed = "This place is currently open!";
+	  	console.log("This place is currently open!");
+	  }
+	  else{
+	  	randResult.is_closed = "Sorry, this place is closed";
+	  	console.log("place is closed");
+	  }
+
 	  prevResults.keys(function(err,mykeys){
 	  	if(!err){
 	  		console.log("the keys " + mykeys);
