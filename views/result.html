@@ -11,14 +11,10 @@
 
   <!-- Bootstrap core CSS -->
   <link href="css/bootstrap.min.css" rel="stylesheet">
-
   <!-- Custom styles for this template -->
   <link href="rr.css" rel="stylesheet">
-  
-
   </head>
   <body class="text-center">
-
     <div class="container d-flex h-100 p-3 mx-auto flex-column">
       <header class="masthead">
        <div class="inner">
@@ -28,36 +24,29 @@
         {{#records}}
       <main role="main" class="inner cover">
           <div class="container">
-            <h3 class="display-4">{{name}}</h1>
+            <h4>{{name}}</h4>
               {{#location}}
-              <img src="{{image_url}}" class="img-fluid" alt="response_image">
+              <img src="{{image_url}}" class="img-fluid" alt="User generated yelp image">
             <p class="lead">{{display_address}}</p>
               {{/location}}
 
 <ul class="list-unstyled text text-left">
-  <li>Is closed?           : {{is_closed}}</li>
-  <li>Rating               : {{rating}}</li>
-  <li>Review Count         : {{review_count}}</li>
-  <li>Price                : {{price}}</li>
+  <li>{{is_closed}}</li>
+  <li>Star Rating (out of 5)     : {{rating}}</li>
+  <li>Number of reviews made: {{review_count}}</li>
+  <li>Price ($-$$$$): {{price}}</li>
   <li>Phone                : {{display_phone}}</li>
-
   <br>
-<a href="{{url}}"class="btn btn-primary btn-lg btn-block" >Go to Yelp! page</a>
-<a href="/reroll" class="btn btn-secondary btn-lg btn-block">Roll again</a>
-<a href="/index.html" class="btn btn-secondary btn-lg btn-block">Change Parameters</a>
+  <a href="{{url}}"class="btn btn-primary btn-lg btn-block" >Go to Yelp! page</a>
+  <a href="/reroll" class="btn btn-secondary btn-lg btn-block">Roll again</a>
+  <a href="/index.html" class="btn btn-secondary btn-lg btn-block">Change Parameters</a>
 </ul>
 <p></p>
 
           </div>
-
         </div>
-
-
         {{/records}}
-
 </p>
-
-
     </body>
 
 
@@ -70,8 +59,12 @@
       <script src="js/vendor/popper.min.js"></script>
       <script src="js/bootstrap.min.js"></script>
       <script src="js/handlebars.min.js"></script>
-    
-
-
+      <script async src="https://www.googletagmanager.com/gtag/js?id=UA-124206262-1"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-124206262-1');
+      </script>
     </html>
 

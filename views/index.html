@@ -3,11 +3,11 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
+    <meta name="description" content="picks a random restaurant">
+    <meta name="author" content="sam kirby">
     <link rel="icon" href="favicon.ico">
 
-    <title>Restaurant Roulette </title>
+    <title>where should i eat .today</title>
 
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -34,9 +34,11 @@
   <body class="text-center">
 
     <div class="cover-container d-flex w-100 h-50 p-3 mx-auto flex-column">
+    	<h3 class="masthead-brand">Restaurant Roulette</h3>
+
       <header class="masthead mb-auto">
         <div class="inner">
-          <h3 class="masthead-brand">Restaurant Roulette</h3>
+          
 
           <!--
           <nav class="nav nav-masthead justify-content-center">
@@ -71,35 +73,50 @@
     </select>
   </div>
 
-
   <div class="form-group">
-    <label for="address">Address</label>
-    <input type="text" class="form-control" id="address" value="5565 Morehouse Dr, San Diego, CA 92121" name="address">
+    <label for="address">Location</label>
+    <input type="text" class="form-control" id="address" value="UCSD" name="address">
   </div>
 
-      <div class="form-check" input type = "text" name="form-check">
-        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="1609" checked>
-        <label class="form-check-label" for="exampleRadios1">
-          Less than 1 mile away
-        </label>
-      </div>
-
-      <div class="form-check">
-        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="8046">
-        <label class="form-check-label" for="exampleRadios2">
-          Less than 5 miles away
-
-        </label>
-      </div>      
-      <div class="form-check">
-        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="16093">
-        <label class="form-check-label" for="exampleRadios3">
-          5+ miles away
-
-        </label>
-      </div>
-      <br>
-        <input type = "submit" class="btn btn-lg btn-secondary"value = "Roll!">
+  <div class="input-group mb-3">
+  <div class="input-group-prepend">
+    <label class="input-group-text" for="inputGroupSelect01">Max Distance</label>
+  </div>
+  <select class="custom-select" id="distanceSelect">
+    <option selected>Choose...</option>
+    <option value="1609"><1 Mile</option>
+    <option value="8046"><3 Miles</option>
+    <option value="16093"><10 Miles</option>
+  </select>
+</div>
+   <div class="input-group mb-3">
+  <div class="input-group-prepend">
+    <label class="input-group-text" for="priceSelect"> Max Price </label>
+  </div>
+  <select class="custom-select" id="priceSelect">
+    <option selected>Choose...</option>
+    <option value="$"><$</option>
+    <option value="$$"><$$</option>
+    <option value="$$$">$$$</option>
+    <option value="$$$$"><$$$$</option>
+  </select>
+</div>
+<!--
+  <div class="form-check form-check-inline">
+    <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+    <label class="form-check-label" for="inlineCheckbox1">$</label>
+  </div>
+  <div class="form-check form-check-inline">
+    <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+    <label class="form-check-label" for="inlineCheckbox2">10-20</label>
+  </div>
+  <div class="form-check form-check-inline">
+    <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3" disabled>
+    <label class="form-check-label" for="inlineCheckbox3">20+ (disabled)</label>
+  </div>
+-->
+  <br>
+  <input type = "submit" class="btn btn-lg btn-secondary"value = "Roll!">
 </form>
 
 
@@ -125,6 +142,16 @@
     <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
     <script src="js/vendor/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-124206262-1"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'UA-124206262-1');
+	</script>
+
+
 
 
 
